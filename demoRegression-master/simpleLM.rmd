@@ -24,7 +24,7 @@ abline(simp)
 summary.lm(simp)
 ```
   
-The LENGTH ~ NECK model has a residual standard error of 5.376 and an adjusted r-squared of 0.7476.
+The LENGTH ~ NECK model has a residual standard error (the standard deviation of the plotted points from the normal curve) of 5.376 and an adjusted R-squared (how much using a certain variable - in this case NECK - to predict LENGTH improved the prediction than simply using the LENGTH mean model) of 0.7476.
   
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
@@ -34,5 +34,10 @@ new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
 predict(simp,new,se.fit=TRUE)
 ```
+  
+A bear with a neck of 17 is predicted to have a length of about 52.77.  
+A bear with a neck of 22 is predicted to have a length of about 60.99.  
+A bear with a neck of 26 is predicted to have a length of about 67.58.  
+  
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
 
