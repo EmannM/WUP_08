@@ -2,7 +2,10 @@
 title: "simpleRegress"
 author: "Emann Malik"
 date: "April 8, 2021"
-output: html_document
+output: 
+  html_document:
+    number_sections: true
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -40,4 +43,30 @@ A bear with a neck of 22 is predicted to have a length of about 60.99.
 A bear with a neck of 26 is predicted to have a length of about 67.58.  
   
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
-
+  
+### LENGTH ~ AGE 
+  
+```{r}
+ageModel <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(ageModel)
+summary.lm(ageModel)
+```
+  
+The LENGTH ~ AGE model has a residual standard error of 7.511 and an adjusted R-squared of 0.5073. 
+  
+Compared to the LENGTH ~ NECK model, this one has a higher residual standard error and a lower adjusted R-squared.  
+  
+### LENGTH ~ HEADLEN
+  
+```{r}
+headlenModel <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(headlenModel)
+summary.lm(headlenModel)
+```
+  
+The LENGTH ~ HEADLEN model has a residual standard error of 4.235 and an adjusted R-squared of 0.8434. 
+  
+Compared to the LENGTH ~ NECK model, this one has a lower residual standard error and a higher adjusted R-squared.    
+  
