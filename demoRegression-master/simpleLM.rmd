@@ -27,7 +27,7 @@ abline(simp)
 summary.lm(simp)
 ```
   
-The LENGTH ~ NECK model has a residual standard error (the standard deviation of the plotted points from the normal curve) of 5.376 and an adjusted R-squared (how much using a certain variable - in this case NECK - to predict LENGTH improved the prediction than simply using the LENGTH mean model) of 0.7476.
+The LENGTH ~ NECK model has a residual standard error (the standard deviation of the plotted points from the normal curve) of 5.376 and an adjusted R-squared (the percent of mean model error explained) of 0.7476.
   
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
@@ -117,7 +117,7 @@ We created five models using five variables (AGE, HEADLEN, HEADWTH, CHEST, and W
   
 The best models (with a lower residual standard error and higher adjusted R-squared than that of LENGTH ~ NECK) are LENGTH ~ HEADLEN and LENGTH ~ CHEST. 
   
-Out of the two, LENGTH ~ HEADLEN has the better values (the points are the closest to the normal curve and there is the highest percent of mean model error explained of all the other models) and best fit. Therefore, head length is the best variable to use to predict the length of a bear. 
-
+Out of the two, LENGTH ~ HEADLEN has the better values (the points are the closest to the normal curve and there is the highest percent of mean model error explained of all the other models) and best fit. 
+  
 The next best model for predicting is LENGTH ~ CHEST before LENGTH ~ NECK comes in third place. The rest of the models had a higher residual standard error and a lower adjusted R-squared than LENGTH ~ NECK.
   
