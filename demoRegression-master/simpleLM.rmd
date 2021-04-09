@@ -60,13 +60,54 @@ Compared to the LENGTH ~ NECK model, this one has a higher residual standard err
 ### LENGTH ~ HEADLEN
   
 ```{r}
-headlenModel <- lm(LENGTH~HEADLEN,data=bears)
+HeadLenModel <- lm(LENGTH~HEADLEN,data=bears)
 plot(LENGTH~HEADLEN,data=bears)
-abline(headlenModel)
-summary.lm(headlenModel)
+abline(HeadLenModel)
+summary.lm(HeadLenModel)
 ```
   
 The LENGTH ~ HEADLEN model has a residual standard error of 4.235 and an adjusted R-squared of 0.8434. 
   
 Compared to the LENGTH ~ NECK model, this one has a lower residual standard error and a higher adjusted R-squared.    
+  
+### LENGTH ~ HEADWTH  
+  
+```{r}
+HeadWthModel <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(HeadWthModel)
+summary.lm(HeadWthModel)
+```  
+  
+The LENGTH ~ HEADWTH model has a residual standard error of 7.32 and an adjusted R-squared of 0.5321. 
+  
+Compared to the LENGTH ~ NECK model, this one has a higher residual standard error and a lower adjusted R-squared.   
+  
+### LENGTH ~ CHEST  
+  
+```{r}
+chestModel <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(chestModel)
+summary.lm(chestModel)
+```   
+  
+The LENGTH ~ CHEST model has a residual standard error of 4.939 and an adjusted R-squared of 0.7869. 
+  
+Compared to the LENGTH ~ NECK model, this one has a lower residual standard error and a higher adjusted R-squared.   
+  
+### LENGTH ~ WEIGHT  
+  
+```{r}
+weightModel <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(weightModel)
+summary.lm(weightModel)
+```  
+  
+The LENGTH ~ WEIGHT model has a residual standard error of 5.432 and an adjusted R-squared of 0.7423. 
+  
+Compared to the LENGTH ~ NECK model, this one has a higher residual standard error and a lower adjusted R-squared.   
+  
+Both these models have a residual standard error and an adjusted R-squared that are very close to one another.
   
